@@ -1,0 +1,82 @@
+﻿<Window x:Class="ColorDetective.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ColorDetective"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        Title="MainWindow" Height="425" Width="276">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Background="#1a1a1a" Opacity="0.85" Grid.ColumnSpan="3" MouseDown="TitleBar_OnMouseDown">
+            <Border Height="25" Padding="5">
+                <Image Source="C:/Users/Chetu/Pictures/rainbowbar.png"/>
+            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Background="#1a1a1a" Height="20" Width="30" Margin="2" Padding="0" VerticalContentAlignment="Center" Click="MinimizeButton_OnClicked">
+                    <materialDesign:PackIcon Kind="Minus" Foreground="Gray" Height="20" Width="15"/>
+                </Button>
+                <Button Background="#1a1a1a" Height="20" Width="30" Margin="2" Padding="0" VerticalContentAlignment="Center" Click="ExitButton_OnClicked">
+                    <materialDesign:PackIcon Kind="AlphaX" Foreground="Gray" Height="20" Width="25"/>
+                </Button>
+            </StackPanel>            
+        </DockPanel>
+        <Border Background="White" Opacity="0.90" Grid.Row="1" Grid.ColumnSpan="3">
+            <StackPanel>
+                <TextBlock Text="Color Detective" FontSize="30" HorizontalAlignment="Center" Padding="0,20,0,0"/>
+                <Border Height="60"></Border>
+                <Button Foreground="White" HorizontalContentAlignment="Left" Height="35" Width="137">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="CameraIris" Foreground="#263238" Height="27" Width="27" VerticalAlignment="Center"/>
+                        <TextBlock Text="  CAPTURE!" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border> 
+        <Border Background="White" Opacity="0.90" Grid.Row="2" BorderBrush="White"/>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="6"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="6"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="4"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Background="Black" Opacity="0.45" Grid.ColumnSpan="5"/>
+            <Border Background="Black" Opacity="0.45" Grid.Row="1" Grid.RowSpan="3"/>
+            <Border Background="Black" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <Border Background="Black" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <Border BorderBrush="Black" BorderThickness="0,0,4,0" Padding="0" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1">
+                <Image Source="C:/Users/Chetu/Pictures/rainbowscalever.png" Height="22" Width="6"></Image>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="4,0,0,0" Grid.Row="1" Grid.RowSpan="3" Grid.Column="3">
+                <Image Source="C:/Users/Chetu/Pictures/rainbowscaleverflip.png" Height="22" Width="6"></Image>
+            </Border>
+            <Border Background="Black" Opacity="0.45" Grid.Row="1" Grid.RowSpan="3" Grid.Column="4"/>
+            <Border Background="Black" Opacity="0.45" Grid.Row="4" Grid.ColumnSpan="5"/>
+        </Grid>
+        <Border Background="White" Opacity="0.90" Grid.Row="2" Grid.Column="2" />
+        <Border Background="White" Opacity="0.90" Grid.Row="3" Grid.ColumnSpan="3" />
+    </Grid>
+</Window>
