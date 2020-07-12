@@ -9,7 +9,7 @@
         AllowsTransparency="True"
         WindowStyle="None"
         Background="Transparent"
-        Title="MainWindow" Height="425" Width="276">
+        Title="MainWindow" Height="427" Width="276">
     <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="27"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="200"/>
             <RowDefinition Height="*"/>
@@ -30,23 +30,26 @@
                 <Button Background="#1a1a1a" Height="20" Width="30" Margin="2" Padding="0" VerticalContentAlignment="Center" Click="MinimizeButton_OnClicked">
                     <materialDesign:PackIcon Kind="Minus" Foreground="Gray" Height="20" Width="15"/>
                 </Button>
+                <Button Background="#1a1a1a" Height="20" Width="30" Margin="2" Padding="0" VerticalContentAlignment="Center">
+                    <materialDesign:PackIcon Kind="SquareMediumOutline" Foreground="Gray" Height="20" Width="25"/>
+                </Button>
                 <Button Background="#1a1a1a" Height="20" Width="30" Margin="2" Padding="0" VerticalContentAlignment="Center" Click="ExitButton_OnClicked">
                     <materialDesign:PackIcon Kind="AlphaX" Foreground="Gray" Height="20" Width="25"/>
                 </Button>
-            </StackPanel>            
+            </StackPanel>
         </DockPanel>
         <Border Background="White" Opacity="0.90" Grid.Row="1" Grid.ColumnSpan="3">
             <StackPanel>
-                <TextBlock Text="Color Detective" FontSize="30" HorizontalAlignment="Center" Padding="0,20,0,0"/>
-                <Border Height="60"></Border>
-                <Button Foreground="White" HorizontalContentAlignment="Left" Height="35" Width="137">
+                <TextBlock Text="COLOR DETECTIVE" FontWeight="DemiBold" FontSize="30" HorizontalAlignment="Center" Padding="0,10,0,0"/>
+                <Border Height="10"></Border>
+                <Button Foreground="White" HorizontalContentAlignment="Left" Height="35" Width="137" Click="Button_Click">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="CameraIris" Foreground="#263238" Height="27" Width="27" VerticalAlignment="Center"/>
                         <TextBlock Text="  CAPTURE!" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
             </StackPanel>
-        </Border> 
+        </Border>
         <Border Background="White" Opacity="0.90" Grid.Row="2" BorderBrush="White"/>
         <Grid Grid.Row="2" Grid.Column="1">
             <Grid.ColumnDefinitions>
